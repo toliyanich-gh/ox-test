@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+    mem_limit: 200m
+    # Optional: use host Trivy if you mount it
+    # volumes:
+    #   - /usr/local/bin/trivy:/usr/local/bin/trivy:ro
+    # environment:
+    #   - TRIVY_CMD=/usr/local/bin/trivy
