@@ -136,6 +136,3 @@ Clear separation of concerns (Controller vs Service vs Worker):
 | **5. Forbidden** — No `fs.readFile` or `JSON.parse` on scan results | ✅ | Only `createReadStream` + stream-json in `streamParser.ts`; grep confirms no readFile/JSON.parse on report. |
 | **6. Node.js Streams** — stream-json (or bfj) object-by-object | ✅ | `stream-json`: Parser, Pick (path filter), StreamValues; processes each vulnerability object in the stream. |
 
-## License
-
-MIT
